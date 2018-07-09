@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <navi/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navi from "./components/Navbar";
 export default {
   name: 'app',
+  components: {Navi},
   data() {
     return {
       msg: 'Сообщение из вью',
