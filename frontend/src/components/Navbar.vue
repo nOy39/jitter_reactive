@@ -3,25 +3,25 @@
     <nav>
       <div class="logo">LOGO</div>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#/">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Log In</a></li>
+        <li><a href="#/login/">Log In</a></li>
       </ul>
     </nav>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "navi",
-      data() {
-        return {
-          msg: 'Navbar',
-        };
-      },
-    };
+  export default {
+    name: "navi",
+    data() {
+      return {
+        msg: 'Navbar',
+      };
+    },
+  };
 
 </script>
 
@@ -37,8 +37,9 @@
     box-sizing: border-box;
     transition: .3s;
   }
+
   nav.black {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     height: 100px;
     padding: 10px 100px;
   }
@@ -50,9 +51,10 @@
     float: left;
     font-size: 24px;
     transition: .3s;
+    position: absolute;
   }
 
-  nav.black .logo{
+  nav.black .logo {
     color: #fff;
   }
 
@@ -80,6 +82,7 @@
   nav.black ul li a {
     color: #fff;
   }
+
   nav ul li a:focus {
     outline: none;
     background: #e2472f;
@@ -102,14 +105,16 @@
     transition: 0.3s;
     box-sizing: border-box;
   }
-  nav ul li a:hover{
+
+  nav ul li a:hover {
     border-radius: 6px;
     width: 10px;
     height: 10px;
     background: #0d3349;
     color: #ffffdd;
   }
-  nav ul li a:after{
+
+  nav ul li a:after {
     width: 10px;
     height: 10px;
     background: #00d6b2;
