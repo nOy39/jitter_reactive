@@ -2,6 +2,7 @@ package org.a2lpo.jitter_reactive.controller;
 
 import org.a2lpo.jitter_reactive.entities.User;
 import org.a2lpo.jitter_reactive.repos.UserRepo;
+import org.a2lpo.jitter_reactive.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +13,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class TestController {
+public class BackController {
 
     @Autowired
     private UserRepo userRepo;
+    @Autowired
+    private UserService userService;
 
     private static final String HELLO_TEXT = "Hello from Spring Boot Backend!";
-    private static final Logger LOG = LoggerFactory.getLogger(TestController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BackController.class);
 
     @RequestMapping(path = "/hello")
     @ResponseStatus(HttpStatus.OK)

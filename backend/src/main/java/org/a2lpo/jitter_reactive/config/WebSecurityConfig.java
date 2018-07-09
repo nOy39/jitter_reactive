@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/api/**","/registration","/static/**","/activate/*","/send","/").permitAll()
+                .antMatchers("/api/**","/actuator/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
