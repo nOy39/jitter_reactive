@@ -36,7 +36,6 @@
     padding: 10px 100px;
     box-sizing: border-box;
     transition: .3s;
-    background: sienna;
   }
   nav.black {
     background: rgba(0,0,0,0.8);
@@ -93,4 +92,27 @@
     color: #fff;
     border-radius: 6px;
   }
+
+  ul li a:before {
+
+    border-radius: 6px;
+    border-bottom: 2px solid #2e2e2e;
+    border-left: 2px solid #2e2e2e;
+    transform-origin: right;
+    transition: 0.3s;
+    box-sizing: border-box;
+  }
+  nav ul li a:hover{
+    border-radius: 6px;
+    width: 10px;
+    height: 10px;
+    background: #0d3349;
+    color: #ffffdd;
+  }
+  nav ul li a:after{
+    width: 10px;
+    height: 10px;
+    background: #00d6b2;
+  }
+
 </style>
