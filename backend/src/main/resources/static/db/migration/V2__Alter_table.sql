@@ -1,2 +1,0 @@
-alter table if exists tag add constraint FKs5kjlptmpwpchvu0he6d62wo0 foreign key (user_id) references usr;
-alter table if exists user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr;

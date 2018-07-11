@@ -3,11 +3,13 @@
     <nav>
       <div class="logo">LOGO</div>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Log In</a></li>
+        <li><a href="#">Блог</a></li>
+        <li><a href="#">Связь</a></li>
+        <li><a href="/#/hello">Проверка BE</a></li>
+        <li><a href="/#/users">Users</a></li>
+        <li><a href="/#/login">Вход</a></li>
       </ul>
     </nav>
   </div>
