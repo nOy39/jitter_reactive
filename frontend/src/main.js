@@ -5,14 +5,14 @@ import App from './App';
 import router from './router';
 import Vuikit from 'vuikit';
 import VuikitIcons from '@vuikit/icons';
+import BootstrapVue from 'bootstrap-vue';
 
 import '@vuikit/theme'
 
-
 Vue.config.productionTip = false;
-
 Vue.use(Vuikit);
 Vue.use(VuikitIcons);
+Vue.use(BootstrapVue);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

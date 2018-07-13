@@ -4,9 +4,9 @@
       <div class="logo">LOGO</div>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Блог</a></li>
-        <li><a href="#">Связь</a></li>
+        <li><a href="/#/poligon">CSS Полигон</a></li>
+        <li><a href="/#/lavrik">Лаврик</a></li>
+        <li><a href="/#/tasks">Задачи</a></li>
         <li><a href="/#/hello">Проверка BE</a></li>
         <li><a href="/#/users">Users</a></li>
         <li><a href="/#/login">Вход</a></li>
