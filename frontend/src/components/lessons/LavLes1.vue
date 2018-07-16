@@ -45,7 +45,7 @@
             <button class="btn btn-primary my-2"
                     @click="addSomeField">+</button>
             <ul v-for="(guest, index) in user.guest">
-              <label class="my-1" @click="deleteForm(index)"><b>Guest {{index+1}}</b></label>
+              <label class="my-1" @dblclick="deleteForm(index)"><b>Guest {{index+1}}</b></label>
               <input type="text" class="form-control" placeholder="guest" v-model="user.guest[index]">
             </ul>
           </div>
@@ -114,7 +114,7 @@
         this.user.guest.push('');
       },
       deleteForm(index) {
-        this.user.guest.splice(index);
+        this.user.guest.splice(index, 1);
       },
       saveForm() {
         this.formShow = !this.formShow;
