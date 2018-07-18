@@ -2,20 +2,19 @@
   <div>
     <header>
       <div class="logo">
-        LOGO
+        Typewriter Blog
       </div>
-      <nav :class="active">
+      <nav :class="navToggle">
         <ul>
-          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/hello">About</a></li>
-          <li><a href="/task">Задачи</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">Profile</a></li>
           <li><a href="#">LogIn</a></li>
         </ul>
       </nav>
       <div class="menu-toggle">
-        <i class="fa fa-bars" aria-hidden="true" v-on:click="toggleMenu"/>
+        <i class="fa fa-bars" aria-hidden="true" @click="toggleMenu"/>
       </div>
     </header>
   </div>
@@ -24,17 +23,25 @@
 <script>
   export default {
     name: "navi",
+    props: ['active'],
     data() {
       return {
         msg: 'Navbar',
+        navToggle: '',
         active: false,
       };
     },
     methods:{
       toggleMenu() {
-        console.log(this.active);
         this.active = !this.active;
-      }
+        console.log(this.active);
+        if (this.active) {
+          return this.navToggle = 'active';
+        } else {
+          return this.navToggle = 'disable';
+        }
+
+      },
     }
   };
 
@@ -43,14 +50,17 @@
 <style scoped>
 
   header {
-    font-family: 'Jura', sans-serif;
+    font-family: 'Special Elite', cursive;
     position: absolute;
     top: 0;
     left: 0;
     padding: 0 100px;
-    background: #262626;
+    background: #000000;
     width: 100%;
     box-sizing: border-box;
+    opacity: 50%;
+    margin-bottom: 10px;
+    font-size: 20px;
   }
 
   header .logo {
@@ -60,16 +70,19 @@
     font-size: 24px;
     float: left;
     font-weight: bold;
+    font-family: 'Special Elite', cursive;
   }
 
   header nav {
     float: right;
+    opacity: 50%;
   }
 
   header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    opacity: 50%;
   }
 
   header nav ul li {
@@ -83,7 +96,7 @@
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    /*temp*/
+      /*temp*/
     display: block;
   }
 
@@ -117,7 +130,7 @@
       /*display: none;*/
       position: absolute;
       width: 100%;
-      height: 45vh;
+      height: 60vh;
       background: #333333;
       top: 50px;
       left: -100%;

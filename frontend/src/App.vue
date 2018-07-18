@@ -1,8 +1,8 @@
 <template>
 
-  <div id="app">
+  <div id="app" class="bg-app">
     <navi/>
-    <router-view/>
+    <router-view class="router"/>
   </div>
 </template>
 
@@ -26,5 +26,9 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
     margin-top: 0px;
+  }
+
+  .router{
+
   }
 </style>

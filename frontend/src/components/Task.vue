@@ -48,7 +48,7 @@
 </script>
 
 <style scoped>
-  .self-card {
+  .head-section{
 
   }
 </style>
