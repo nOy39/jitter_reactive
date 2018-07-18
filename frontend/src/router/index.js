@@ -6,22 +6,14 @@ import Task from '@/components/Task';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
-    {
-      path: '/hello',
-      name: 'HelloWorld',
-      component: HelloWorld,
-    },
-    {
-      path: '/',
-      name: 'MainComponent',
-      component: MainComponent,
-    },
-    {
-      path: '/task',
-      name: 'Task',
-      component: Task,
-    },
-  ],
+    {path: '/task', component: Task},
+    {path: '/', component: MainComponent},
+    {path: '/hello', component: HelloWorld}
+  ]
 });
+
+export default router
+
