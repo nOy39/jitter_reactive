@@ -15,6 +15,7 @@
       </nav>
       <div class="menu-toggle">
         <i class="fa fa-bars" aria-hidden="true" @click="toggleMenu"/>
+
       </div>
     </header>
   </div>
@@ -31,7 +32,7 @@
         active: false,
       };
     },
-    methods:{
+    methods: {
       toggleMenu() {
         this.active = !this.active;
         console.log(this.active);
@@ -40,15 +41,12 @@
         } else {
           return this.navToggle = 'disable';
         }
-
       },
     }
   };
-
 </script>
 
 <style scoped>
-
   header {
     font-family: 'Special Elite', cursive;
     position: absolute;
@@ -96,7 +94,7 @@
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-      /*temp*/
+    /*temp*/
     display: block;
   }
 
@@ -104,7 +102,6 @@
   header nav ul li a.active {
     color: #fff;
     background: #2196f3;
-
   }
 
   .menu-toggle {
@@ -117,7 +114,6 @@
   }
 
   @media (max-width: 991px) {
-
     header {
       padding: 0 20px;
     }
@@ -147,7 +143,7 @@
     }
 
     header nav ul li a {
-      border-bottom: 1px solid rgba(0,0,0,.2);
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
     }
   }
 </style>
