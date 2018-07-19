@@ -4,11 +4,13 @@
     <vk-button
     @click="callRestService()"
     >MyButton</vk-button>
-    <vk-spinner
-    v-show="spinner">
-    </vk-spinner>
+    {{msg}}
     <progress class="uk-progress" value="10" max="50"></progress>
     <h3>{{ response }}</h3>
+
+    <div>
+      All their equipment and instruments are alive.
+    </div>
   </div>
 </template>
 

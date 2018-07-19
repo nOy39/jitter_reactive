@@ -60,7 +60,6 @@
     margin-bottom: 10px;
     font-size: 20px;
   }
-
   header .logo {
     color: #fff;
     height: 50px;
@@ -70,23 +69,19 @@
     font-weight: bold;
     font-family: 'Special Elite', cursive;
   }
-
   header nav {
     float: right;
     opacity: 50%;
   }
-
   header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
     opacity: 50%;
   }
-
   header nav ul li {
     list-style: none;
   }
-
   header nav ul li a {
     height: 50px;
     line-height: 50px;
@@ -97,13 +92,11 @@
     /*temp*/
     display: block;
   }
-
   header nav ul li a:hover,
   header nav ul li a.active {
     color: #fff;
     background: #2196f3;
   }
-
   .menu-toggle {
     color: #fff;
     float: right;
@@ -112,16 +105,13 @@
     cursor: pointer;
     display: none;
   }
-
   @media (max-width: 991px) {
     header {
       padding: 0 20px;
     }
-
     .menu-toggle {
       display: block;
     }
-
     header nav {
       /*display: none;*/
       position: absolute;
@@ -132,16 +122,13 @@
       left: -100%;
       transition: 0.5s;
     }
-
     header nav.active {
       left: 0;
     }
-
     header nav ul {
       display: block;
       text-align: center;
     }
-
     header nav ul li a {
       border-bottom: 1px solid rgba(0, 0, 0, .2);
     }
