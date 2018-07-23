@@ -8,9 +8,9 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/hello">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">LogIn</a></li>
+          <li><a href="/contacts">Contact</a></li>
+          <li v-show="isAuthenticated"><a href="/task">Task</a></li>
+          <li><a @click="$emit('login')">{{status}}</a></li>
         </ul>
       </nav>
       <div :class="iconStatus" @click="setActive">
@@ -27,6 +27,7 @@
 
 <script>
   export default {
+    props:['isAuthenticated'],
     name: "navi",
     data() {
       return {
@@ -47,8 +48,21 @@
           this.navToggle = '';
         }
       },
+      dynamicUrl() {
+        if (!this.isAuthenticated) {
+          return '/login';
+        }
+      }
     },
-    computed: {},
+    computed: {
+      status() {
+        if (this.isAuthenticated) {
+          return 'Log Out';
+        } else {
+          return 'Log in';
+        }
+      }
+    },
   };
 </script>
 
@@ -65,6 +79,11 @@
     width: 100%;
     box-sizing: border-box;
     background: teal;
+    z-index:100;
+  }
+
+  header:hover{
+    opacity: 1;
   }
 
   header .logo {

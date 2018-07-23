@@ -1,5 +1,5 @@
 <template>
-  <div class="head-section my-2">
+  <div>
     <h3>Список задач</h3>
     <hr>
     <vk-grid matched class="uk-child-width-1-3@l uk-child-width-1-1@l">
@@ -48,7 +48,5 @@
 </script>
 
 <style scoped>
-  .head-section{
 
-  }
 </style>
