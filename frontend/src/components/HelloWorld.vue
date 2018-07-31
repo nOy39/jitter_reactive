@@ -13,6 +13,19 @@
     <div>
       Is Authenticated = {{isAuthenticated}}
     </div>
+    <quick-menu :menu-count=4 :icon-class=icons :menu-url-list=list></quick-menu>
+    <icon name="beer"></icon>
+
+    <!-- with options -->
+    <icon name="sync" scale="2" spin></icon>
+    <icon name="comment" flip="horizontal"></icon>
+    <icon name="code-branch" label="Forked Repository"></icon>
+
+    <!-- stacked icons -->
+    <icon label="No Photos">
+      <icon name="camera"></icon>
+      <icon name="ban" scale="2" class="alert"></icon>
+    </icon>
   </div>
 </template>
 
@@ -20,11 +33,14 @@
   // import axios from 'axios'
   import {AXIOS} from './http-common';
   import Hamburger from "./parts/Hamburger";
+  import quickMenu from 'vue-quick-menu';
 
   export default {
     name: 'HelloWorld',
     props: ['isAuthenticated'],
-    components: {Hamburger},
+    components: {
+      Hamburger, quickMenu
+    },
     data() {
       return {
         msg: 'Welcome to Your Vue.js App',

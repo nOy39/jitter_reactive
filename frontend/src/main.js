@@ -3,20 +3,30 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-// import Vuikit from 'vuikit';
-// import VuikitIcons from '@vuikit/icons';
-//
-// import '@vuikit/theme'
+import Snotify, { SnotifyPosition } from 'vue-snotify'
+import Vuelidate from 'vuelidate'
+import store from './store/index'
 
+
+const options = {
+  toast: {
+    position: SnotifyPosition.rightTop
+  }
+};
 
 Vue.config.productionTip = false;
+Vue.use(Snotify,options);
+Vue.use(Vuelidate);
 
-// Vue.use(Vuikit);
-// Vue.use(VuikitIcons);
+export const eventEmitter = new Vue();
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });
+
+

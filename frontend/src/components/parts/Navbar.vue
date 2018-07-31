@@ -6,10 +6,11 @@
       </div>
       <nav :class="navToggle">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/hello">About</a></li>
-          <li><a href="/contacts">Contact</a></li>
-          <li v-show="isAuthenticated"><a href="/task">Task</a></li>
+          <li><router-link active-class="active" exact to="/">Home</router-link></li>
+          <li><router-link active-class="active" to="/hello">About</router-link></li>
+          <li><router-link active-class="active" to="/contacts">Contact</router-link></li>
+          <li><router-link active-class="active" to="/poligon">Poligon</router-link></li>
+          <li v-show="isAuthenticated"><router-link active-class="active" to="/task">Task</router-link></li>
           <li><a @click="$emit('login')">{{status}}</a></li>
         </ul>
       </nav>
@@ -27,7 +28,9 @@
 
 <script>
   export default {
-    props:['isAuthenticated'],
+    props:{
+      isAuthenticated: Boolean
+    },
     name: "navi",
     data() {
       return {

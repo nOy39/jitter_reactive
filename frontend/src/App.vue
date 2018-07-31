@@ -1,35 +1,38 @@
 <template>
-
   <div id="app" class="bg-app">
-    <navi v-bind:isAuthenticated="isAuthenticated"
+    <navi class="navBar"
+          :isAuthenticated="isAuthenticated"
           v-on:login="login()"/>
-    <search/>
     <router-view class="router"
-                 v-bind:isAuthenticated="isAuthenticated"/>
+                 :isAuthenticated="isAuthenticated"
+                 :msg="msg"/>
     <bottom-menu v-show="isAuthenticated"/>
   </div>
 </template>
 
 <script>
-import Navi from "./components/parts/Navbar";
-import BottomMenu from "./components/parts/BottomMenu";
-import Search from "./components/parts/Search";
-export default {
-  name: 'app',
-  components: {Search, BottomMenu, Navi},
-  data() {
-    return {
-      msg: 'Сообщение из вью',
-      isAuthenticated: false,
-    };
-  },
-  methods: {
-    login(){
-      this.isAuthenticated = !this.isAuthenticated;
-  }
+  import Navi from "./components/parts/Navbar";
+  import BottomMenu from "./components/parts/BottomMenu";
+  import Search from "./components/parts/Search";
+  import quickMenu from 'vue-quick-menu';
 
-}
-};
+  export default {
+    name: 'app',
+    components: {Search, BottomMenu, Navi, quickMenu},
+    data() {
+      return {
+        msg: 'Hello msg from vue',
+        isAuthenticated: false,
+        icons: [1, 2, 3, 4],
+        parentString: 'Родительская строка',
+      };
+    },
+    methods: {
+      login() {
+        this.isAuthenticated = !this.isAuthenticated;
+      }
+    }
+  };
 </script>
 
 <style>
@@ -41,9 +44,10 @@ export default {
     margin-top: 0px;
   }
 
-  .router{
+  .router {
     position: absolute;
-    margin-top: 100px;
+    margin-top: 60px;
+    margin-left: 5%;
   }
 
 </style>
